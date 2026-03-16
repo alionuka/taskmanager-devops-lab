@@ -50,7 +50,7 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./mvnw -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-          -Dsonar.projectKey=alionuka_taskmanager-devops-lab
-          -Dsonar.organization=alionuka
-          -Dsonar.host.url=https://sonarcloud.io
+        run: |
+          ./mvnw -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:5.5.0.6356:sonar \
+            -Dsonar.projectKey=alionuka_taskmanager-devops-lab \
+            -Dsonar.organization=alionuka
