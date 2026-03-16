@@ -26,7 +26,7 @@ jobs:
 
       - name: Build and test notification-service
         working-directory: ./notification-service
-        run: ./mvn -B verify
+        run: mvn -B verify
 
   sonar-main-service:
     name: sonar-main-service
